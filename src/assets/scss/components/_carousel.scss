@@ -1,0 +1,104 @@
+// ----------------------------------------------------------------------------
+// Carousel
+// ----------------------------------------------------------------------------
+
+@use '../config' as *;
+@use '../mixin/' as mix;
+
+.swiper-container {
+  @media (min-width: $sm) {
+    max-width: 70vw;
+  }
+
+  @media (min-width: 1366px) {
+    max-width: 60vw;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 70vw;
+  }
+
+  @media (min-width: 1920px) {
+    @include mix.rem(max-width, 1640px);
+  }
+}
+
+
+// Carousel Navigation
+// ------------------------------------
+
+.swiper-button-prev, 
+.swiper-button-next {
+  display: none !important;
+  top: 42%;
+  color: var(--secondary-color);
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    @include mix.rem(width, 100px);
+    @include mix.rem(height, 100px);
+    border-radius: 50%;
+    background-color: var(--white);
+  }
+
+  @media (min-width: $lg) {
+    display: flex;
+    transform: scale(0.8);
+  }
+
+  @media (min-width: $xl) {
+    transform: scale(1);
+  }
+}
+
+.swiper-button-prev {
+  left: 6%;
+  
+  @media (min-width: $xl) {
+    left: -8%;
+  }
+}
+
+.swiper-button-next {
+  right: 6%;
+  
+  @media (min-width: $xl) {
+    right: -8%;
+  }
+}
+
+
+// Carousel Pagination
+// ------------------------------------
+
+.swiper-pagination {
+  right: 0;
+  bottom: initial !important;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  @include mix.rem(max-width, 320px);
+  padding: calc(var(--spacer) * 2) 0;
+  margin: 0 auto;
+
+  @media (min-width: $md) {
+    position: initial !important;
+    margin-left: initial;
+  }
+}
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+  width: 100% !important;
+  @include mix.rem(height, 5px, !important);
+  @include mix.rem(max-width, 80px);
+  border-radius: 0% !important;
+}

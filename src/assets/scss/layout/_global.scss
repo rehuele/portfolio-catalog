@@ -1,0 +1,62 @@
+// ----------------------------------------------------------------------------
+// Global / Main
+// ----------------------------------------------------------------------------
+
+@use '../config' as *;
+@use '../mixin/rem' as mix;
+
+// Layout + Images + Extras
+// ------------------------------------
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--primary-color);
+  background-color: powderblue;
+}
+
+.container {
+  width: 100%;
+  @include mix.rem(max-width, 912px);
+  padding: 0 var(--spacer);
+  margin: 0 auto;
+}
+
+
+// Section
+// ------------------------------------
+
+.section__title {
+  margin-top: calc(var(--spacer) * 5);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  line-height: 1;
+  @include mix.rem(font-size, 48px);
+  color: var(--red);
+
+  @media (min-width: $md) { 
+    @include mix.rem(font-size, 75px);
+  }
+
+  @media (min-width: $xl) { 
+    @include mix.rem(font-size, 110px);
+  }
+}
+
+.section__text {
+  margin-top: calc(var(--spacer) * 5);
+  font-family: var(--font-tertiary);
+  @include mix.rem(font-size, 20px);
+  line-height: 1.4;
+  font-weight: 400;
+  
+  @media (min-width: $md) { 
+    padding-left: calc(var(--spacer) * 12);
+  }
+}
