@@ -17,11 +17,16 @@ body {
   margin: 0;
   font-family: var(--font-primary);
   font-weight: 400;
-  color: var(--primary-color);
-  background-color: powderblue;
+  // background-color: powderblue;
+  background-color: var(--white);
+}
+
+main {
+  padding-bottom: calc(var(--spacer) * 5);
 }
 
 .container {
+  position: relative;
   width: 100%;
   @include mix.rem(max-width, 912px);
   padding: 0 var(--spacer);
@@ -29,11 +34,23 @@ body {
 }
 
 
+// Hero
+// ------------------------------------
+
+.hero {
+  padding: calc(var(--spacer) * 3) 0;
+  background-color: hsl(238, 53%, 37%); // #2d3091
+
+  @media (min-width: $md) { 
+    padding-bottom: calc(var(--spacer) * 16);
+  }
+}
+
+
 // Section
 // ------------------------------------
 
 .section__title {
-  margin-top: calc(var(--spacer) * 5);
   font-family: var(--font-secondary);
   font-weight: 700;
   line-height: 1;
@@ -55,8 +72,38 @@ body {
   @include mix.rem(font-size, 20px);
   line-height: 1.4;
   font-weight: 400;
+  color: var(--white);
   
   @media (min-width: $md) { 
-    padding-left: calc(var(--spacer) * 12);
+    // padding-left: calc(var(--spacer) * 12);
+    padding-left: calc(100% / 8);
   }
+}
+
+.website-listing {
+  padding-bottom: calc(var(--spacer) * 3);
+
+  @media (min-width: $md) { 
+    // margin-top: -64px;
+    margin-top: -96px;
+  }
+
+  .container {
+    padding: 0;
+
+    @media (min-width: $md) { 
+      padding: 0 var(--spacer);
+    }
+  }
+}
+
+// Footer
+// ------------------------------------
+
+footer {
+  padding: calc(var(--spacer) * 4) 0;
+  font-family: var(--font-tertiary);
+  @include mix.rem(font-size, 14px);
+  font-weight: 400;
+  color: var(--primary-color);
 }

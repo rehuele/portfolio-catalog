@@ -31,7 +31,6 @@
 .swiper-button-next {
   display: none !important;
   top: 42%;
-  // color: var(--secondary-color);
 
   &::before {
     content: '';
@@ -39,7 +38,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.8);
     display: inline-block;
     @include mix.rem(width, 100px);
     @include mix.rem(height, 100px);
@@ -51,26 +50,16 @@
     display: flex !important;
     transform: scale(0.8);
   }
-
-  @media (min-width: $xl) {
-    transform: scale(1);
-  }
 }
 
 .swiper-button-prev {
-  left: 6% !important;
-  
-  @media (min-width: $xl) {
-    left: -8% !important;
-  }
+  top: -48px !important;
+  right: 100px !important;
+  left: initial !important;
 }
 
 .swiper-button-next {
-  right: 6% !important;
-  
-  @media (min-width: $xl) {
-    right: -8% !important;
-  }
+  top: -48px !important;
 }
 
 

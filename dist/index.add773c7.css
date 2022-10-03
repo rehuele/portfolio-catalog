@@ -68,6 +68,7 @@ html {
 
 body {
   font-family: var(--font-primary);
+  color: var(--primary-color);
   background-color: var(--white);
   margin: 0;
   font-weight: 400;
@@ -75,6 +76,7 @@ body {
 }
 
 main {
+  padding-top: calc(var(--spacer) * 5);
   padding-bottom: calc(var(--spacer) * 5);
 }
 
@@ -84,18 +86,6 @@ main {
   max-width: 57rem;
   padding: 0 var(--spacer);
   margin: 0 auto;
-  position: relative;
-}
-
-.hero {
-  padding: calc(var(--spacer) * 3) 0;
-  background-color: #2c3090;
-}
-
-@media (min-width: 768px) {
-  .hero {
-    padding-bottom: calc(var(--spacer) * 16);
-  }
 }
 
 .section__title {
@@ -121,7 +111,6 @@ main {
 .section__text {
   margin-top: calc(var(--spacer) * 5);
   font-family: var(--font-tertiary);
-  color: var(--white);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
@@ -129,36 +118,8 @@ main {
 
 @media (min-width: 768px) {
   .section__text {
-    padding-left: 12.5%;
+    padding-left: calc(var(--spacer) * 12);
   }
-}
-
-.website-listing {
-  padding-bottom: calc(var(--spacer) * 3);
-}
-
-@media (min-width: 768px) {
-  .website-listing {
-    margin-top: -96px;
-  }
-}
-
-.website-listing .container {
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .website-listing .container {
-    padding: 0 var(--spacer);
-  }
-}
-
-footer {
-  padding: calc(var(--spacer) * 4) 0;
-  font-family: var(--font-tertiary);
-  color: var(--primary-color);
-  font-size: .875rem;
-  font-weight: 400;
 }
 
 .card-video {
@@ -323,7 +284,7 @@ iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)scale(.8);
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 1024px) {
@@ -333,14 +294,30 @@ iframe {
   }
 }
 
+@media (min-width: 1440px) {
+  .swiper-button-prev, .swiper-button-next {
+    transform: scale(1);
+  }
+}
+
 .swiper-button-prev {
-  top: -48px !important;
-  right: 100px !important;
-  left: initial !important;
+  left: 6% !important;
+}
+
+@media (min-width: 1440px) {
+  .swiper-button-prev {
+    left: -8% !important;
+  }
 }
 
 .swiper-button-next {
-  top: -48px !important;
+  right: 6% !important;
+}
+
+@media (min-width: 1440px) {
+  .swiper-button-next {
+    right: -8% !important;
+  }
 }
 
 .swiper-pagination {
@@ -1020,4 +997,3 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-/*# sourceMappingURL=index.4717fcfd.css.map */
