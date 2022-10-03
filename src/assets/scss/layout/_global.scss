@@ -68,7 +68,7 @@ main {
 }
 
 .section__text {
-  margin-top: calc(var(--spacer) * 5);
+  margin-top: calc(var(--spacer) * 3);
   font-family: var(--font-tertiary);
   @include mix.rem(font-size, 20px);
   line-height: 1.4;
@@ -76,7 +76,7 @@ main {
   color: var(--white);
   
   @media (min-width: $md) { 
-    // padding-left: calc(var(--spacer) * 12);
+    margin-top: calc(var(--spacer) * 5);
     padding-left: calc(100% / 8);
   }
 }
