@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   font-family: var(--font-primary);
   font-weight: 400;
@@ -22,6 +21,8 @@ body {
 }
 
 main {
+  overflow-x: hidden;
+  position: relative;
   padding-bottom: calc(var(--spacer) * 5);
 }
 
