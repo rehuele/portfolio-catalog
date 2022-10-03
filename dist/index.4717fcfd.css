@@ -263,7 +263,6 @@ iframe {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  color: var(--secondary-color);
   top: 42%;
   display: none !important;
 }
@@ -286,8 +285,8 @@ iframe {
 
 @media (min-width: 1024px) {
   .swiper-button-prev, .swiper-button-next {
-    display: flex;
     transform: scale(.8);
+    display: flex !important;
   }
 }
 
@@ -298,22 +297,22 @@ iframe {
 }
 
 .swiper-button-prev {
-  left: 6%;
+  left: 6% !important;
 }
 
 @media (min-width: 1440px) {
   .swiper-button-prev {
-    left: -8%;
+    left: -8% !important;
   }
 }
 
 .swiper-button-next {
-  right: 6%;
+  right: 6% !important;
 }
 
 @media (min-width: 1440px) {
   .swiper-button-next {
-    right: -8%;
+    right: -8% !important;
   }
 }
 

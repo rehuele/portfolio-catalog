@@ -31,7 +31,7 @@
 .swiper-button-next {
   display: none !important;
   top: 42%;
-  color: var(--secondary-color);
+  // color: var(--secondary-color);
 
   &::before {
     content: '';
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: $lg) {
-    display: flex;
+    display: flex !important;
     transform: scale(0.8);
   }
 
@@ -58,18 +58,18 @@
 }
 
 .swiper-button-prev {
-  left: 6%;
+  left: 6% !important;
   
   @media (min-width: $xl) {
-    left: -8%;
+    left: -8% !important;
   }
 }
 
 .swiper-button-next {
-  right: 6%;
+  right: 6% !important;
   
   @media (min-width: $xl) {
-    right: -8%;
+    right: -8% !important;
   }
 }
 
