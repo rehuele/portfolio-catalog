@@ -71,11 +71,12 @@ body {
   background-color: var(--white);
   margin: 0;
   font-weight: 400;
-  overflow-x: hidden;
 }
 
 main {
   padding-bottom: calc(var(--spacer) * 5);
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
